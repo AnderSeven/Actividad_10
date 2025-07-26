@@ -1,3 +1,15 @@
+def invertir_texto(texto):
+    if texto == "":
+        return texto
+    else:
+        return invertir_texto(texto[1:]) + texto[0]
+
+def cuenta_regresiva(numero):
+    if numero == 0:
+        return numero
+    else:
+        return
+
 opciones = 0
 a = False
 while a == False:
@@ -11,11 +23,13 @@ while a == False:
     opciones = int(input("Elija una opcion: "))
     match opciones:
         case 1:
-            print("asf")
+            texto = input("Ingrese la palabra: ")
+            print(f"Texto invertido: {invertir_texto(texto)}")
         case 2:
             print("asdf")
         case 3:
-            print("adsf")
+            numero = int(input("Ingrese un numero: "))
+            print(f"Cuenta regresiva: {cuenta_regresiva(numero)}")
         case 4:
             print("asdf")
         case 5:
